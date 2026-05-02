@@ -1,45 +1,49 @@
-# 🧠 AI Resume Analyzer 
+# ⚡ AI Resume Analyzer Pro
 
-## 📌 Overview
+A full-stack web application to analyze resumes against job descriptions using semantic similarity and NLP techniques.
 
-AI Resume Analyzer is a full-stack web application that evaluates resumes against job descriptions using Natural Language Processing (NLP). It helps candidates improve their resumes and assists recruiters with data-driven insights.
+## Tech Stack
+- **Backend**: Python, FastAPI, MongoDB, pdfminer
+- **Frontend**: React.js (Vite)
+- **NLP**: Regex-based skill extraction, semantic scoring
 
----
-
-## 🚀 Features
-
-### 👤 User Side
-
-* Upload Resume (PDF)
-* Enter Job Description
-* Resume Score Calculation
-* Skill Extraction
-* Missing Skill Identification
-* AI-based Feedback
-
-### 👨‍💼 Admin Panel
-
-* View total users and resumes
-* Average resume score
-* Skill demand analytics
-* Resume score distribution
+## Features
+- 🔐 JWT authentication (register / login)
+- 📄 Resume input via text paste or PDF/TXT file upload
+- 🧠 NLP skill extraction (tech + soft skills)
+- 📊 Match scoring: overall, tech, soft skill scores
+- 🔍 Matched / missing / extra skill breakdown
+- 📜 Analysis history per user
+- 🛡️ Admin dashboard: user stats, score distribution, skill demand analytics
 
 ---
 
-## 🏗️ Tech Stack
+## Backend Setup
 
-### 🔹 Backend
+```bash
+cd backend
+pip install -r requirements.txt
 
-* FastAPI (Python)
-* MongoDB (Database)
+# Set environment variables
+export MONGODB_URI="mongodb+srv://<user>:<pass>@cluster.mongodb.net"
+export SECRET_KEY="your-secret-key"
 
-### 🔹 Frontend
+uvicorn main:app --reload --port 8000
+```
 
-* React.js
+API docs available at: http://localhost:8000/docs
 
-### 🔹 AI/NLP
+---
 
-* Basic text analysis (extendable to advanced models like BERT)
+## Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+App runs at: http://localhost:5173
 
 ---
 
